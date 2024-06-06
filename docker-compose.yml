@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  hackathon-site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hackathon-site
+    restart: unless-stopped
+    ports:
+      - 52346:3000
+    environment:
+      - NODE_ENV=production
